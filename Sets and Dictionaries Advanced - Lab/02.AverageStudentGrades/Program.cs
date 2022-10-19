@@ -29,7 +29,14 @@ namespace _02.AverageStudentGrades
 
             foreach (var gradesByStudent in gradesByStudents)
             {
-                Console.WriteLine($"{gradesByStudent.Key} -> {string.Join(" ", gradesByStudent.Value)} (avg: {gradesByStudent.Value.Average():f2})");
+                Console.Write($"{gradesByStudent.Key} -> ");
+
+                foreach (var grade in gradesByStudent.Value)
+                {
+                    Console.Write($"{grade:f2} ");
+                }
+
+                Console.WriteLine($"(avg: {gradesByStudent.Value.Average():f2})");
             }
         }
     }
