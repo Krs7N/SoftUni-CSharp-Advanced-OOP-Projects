@@ -29,7 +29,7 @@ namespace WordCount
 
             using (StreamReader reader = new StreamReader(textFilePath))
             {
-                Regex regex = new Regex("[A-Za-z]+");
+                Regex regex = new Regex("[a-z]+");
 
                 while (!reader.EndOfStream)
                 {
