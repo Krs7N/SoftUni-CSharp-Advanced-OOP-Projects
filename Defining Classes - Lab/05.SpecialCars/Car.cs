@@ -101,7 +101,7 @@ namespace CarManufacturer
             sb.AppendLine($"Make: {Make}");
             sb.AppendLine($"Model: {Model}");
             sb.AppendLine($"Year: {Year}");
-            sb.AppendLine($"Fuel: {FuelQuantity:f1}");
+            sb.AppendLine($"Fuel: {Math.Round(FuelQuantity, 1)}");
 
             return sb.ToString().Trim();
         }
@@ -114,7 +114,7 @@ namespace CarManufacturer
             sb.AppendLine($"Model: {Model}");
             sb.AppendLine($"Year: {Year}");
             sb.AppendLine($"HorsePowers: {Engine.HorsePower}");
-            sb.AppendLine($"FuelQuantity: {FuelQuantity:f1}");
+            sb.AppendLine($"FuelQuantity: {Math.Round(FuelQuantity, 1)}");
 
             return sb.ToString().Trim();
         }

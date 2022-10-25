@@ -45,14 +45,12 @@ namespace CarManufacturer
             }
 
             commands = Console.ReadLine();
-            int engineIndex = 0;
-            int tiresIndex = 0;
 
             while (commands != "Show special")
             {
                 string[] carsInfo = commands.Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
-                Car car = new Car(carsInfo[0], carsInfo[1], int.Parse(carsInfo[2]), double.Parse(carsInfo[3]), double.Parse(carsInfo[4]), engines[engineIndex++], tiresList[tiresIndex++]);
+                Car car = new Car(carsInfo[0], carsInfo[1], int.Parse(carsInfo[2]), double.Parse(carsInfo[3]), double.Parse(carsInfo[4]), engines[int.Parse(carsInfo[5])], tiresList[int.Parse(carsInfo[6])]);
 
                 cars.Add(car);
 
