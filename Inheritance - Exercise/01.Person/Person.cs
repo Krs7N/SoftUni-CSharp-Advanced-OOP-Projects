@@ -13,11 +13,17 @@ namespace Person
 			Age = age;
         }
 
-		public int Age
+		public virtual int Age
 		{
-			get { return age; }
-			set { age = value; }
-		}
+			get => age;
+            set
+            {
+                if (value > 0)
+                {
+                    age = value;
+                }
+            }
+        }
 
         public string Name
 		{
